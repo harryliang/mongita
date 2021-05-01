@@ -3,7 +3,7 @@ import copy
 import datetime
 import functools
 import re
-
+from typing import Pattern
 import bson
 import sortedcontainers
 
@@ -36,7 +36,7 @@ SORT_ORDER = {
     bson.ObjectId: b'\x07',
     bool: b'\x08',
     datetime.datetime: b'\t',
-    re.Pattern: b'\n',
+    Pattern: b'\n',
 }
 
 
